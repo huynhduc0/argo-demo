@@ -14,7 +14,7 @@ spec:
         app: argocd-demo
     spec:
       containers:
-      - image: vanlahuynhduc/itmo-ops-test
+      - image: index.docker.io/v1/vanlahuynhduc/itmo-ops-test
         name: itmo-ops-test
         ports:
         - containerPort: 80
