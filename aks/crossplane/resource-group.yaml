@@ -1,0 +1,11 @@
+apiVersion: azure.upbound.io/v1beta1
+kind: ResourceGroup
+metadata:
+  name: crossplane-thduc
+spec:
+  providerConfigRef:
+    name: azure-provider
+  forProvider:
+    location: Central US
+    tags:
+      provisioner: crossplane
