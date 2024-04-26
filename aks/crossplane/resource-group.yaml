@@ -1,11 +1,9 @@
-apiVersion: azure.upbound.io/v1beta1
-kind: ResourceGroup
+apiVersion: pkg.crossplane.io/v1
+kind: Provider
 metadata:
-  name: crossplane-thduc
+  name: provider-family-azure
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
+    argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
 spec:
-  providerConfigRef:
-    name: azure-provider
-  forProvider:
-    location: Central US
-    tags:
-      provisioner: crossplane
+  package: xpkg.upbound.io/upbound/provider-family-azure:v1.0.1
