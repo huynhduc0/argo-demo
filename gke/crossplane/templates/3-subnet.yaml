@@ -1,0 +1,19 @@
+apiVersion: compute.gcp.upbound.io/v1beta1
+kind: Subnetwork
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
+    argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
+  labels:
+    testing.upbound.io/example-name: dev-private
+  name:  dev-private
+spec:
+  forProvider:
+    ipCidrRange: 10.2.0.0/16
+    networkSelector:
+      matchLabels:
+        testing.upbound.io/example-name: dev-private
+    region: us-central1
+    secondaryIpRange:
+      - ipCidrRange: 10.48.0.1/24
+        rangeName: k8s-pod-range

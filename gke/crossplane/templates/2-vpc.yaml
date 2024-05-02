@@ -1,0 +1,14 @@
+apiVersion: compute.gcp.upbound.io/v1beta1
+kind: Network
+metadata:
+  annotations:
+    meta.upbound.io/example-id: vpcaccess/v1beta1/connector
+    uptest.upbound.io/timeout: "4800"
+    argocd.argoproj.io/sync-wave: "2"
+    argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
+  labels:
+    testing.upbound.io/example-name: {{ .Values.network.vpc.name }}
+  name: {{ .Values.network.vpc.name }}
+spec:
+  forProvider:
+    autoCreateSubnetworks: false
