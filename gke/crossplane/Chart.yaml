@@ -1,0 +1,4 @@
+apiVersion: v2
+name: GKE
+version: 0.1.0
+description: GKE with argoCD and Crossplane
