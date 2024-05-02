@@ -14,4 +14,4 @@ spec:
     enableDnsHostnames: true
     enableDnsSupport: true
     tags:
-      Name: dev2
+      Name: dev-vpc
