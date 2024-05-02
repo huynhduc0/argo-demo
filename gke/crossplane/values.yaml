@@ -2,4 +2,4 @@ provider:
   name: gpc-provider
 network:
   vpc:
-    name: vpcaccess_network
+    name: dev
