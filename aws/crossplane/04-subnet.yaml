@@ -9,7 +9,7 @@ metadata:
     name: dev-private-us-east-1a
 spec:
   providerConfigRef:
-    name: aws-provider  # This line points to your specific ProviderConfig
+    name: aws-provider
   forProvider:
     availabilityZone: us-east-1a
     cidrBlock: 10.0.0.0/19
@@ -32,7 +32,7 @@ metadata:
     name: dev-private-us-east-1b
 spec:
   providerConfigRef:
-    name: aws-provider  # This line points to your specific ProviderConfig
+    name: aws-provider
   forProvider:
     availabilityZone: us-east-1b
     cidrBlock: 10.0.32.0/19
@@ -55,7 +55,7 @@ metadata:
     name: dev-public-us-east-1a
 spec:
   providerConfigRef:
-    name: aws-provider  # This line points to your specific ProviderConfig
+    name: aws-provider
   forProvider:
     availabilityZone: us-east-1a
     cidrBlock: 10.0.64.0/19
@@ -78,7 +78,7 @@ metadata:
     name: dev-public-us-east-1b
 spec:
   providerConfigRef:
-    name: aws-provider  # This line points to your specific ProviderConfig
+    name: aws-provider
   forProvider:
     availabilityZone: us-east-1b
     cidrBlock: 10.0.96.0/19
