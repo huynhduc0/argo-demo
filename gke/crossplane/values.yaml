@@ -1,5 +1,5 @@
 provider:
-  name: aws-provider
+  name: gpc-provider
 network:
   vpc:
     name: vpcaccess_network
