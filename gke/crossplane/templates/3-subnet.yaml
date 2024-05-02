@@ -9,6 +9,8 @@ spec:
   providerConfigRef:
     name: gpc-provider
   forProvider:
+    networkRef:
+      name: {{ .Values.network.vpc.name }}
     ipCidrRange: 10.0.0.0/18
     networkSelector:
     region: us-central1
