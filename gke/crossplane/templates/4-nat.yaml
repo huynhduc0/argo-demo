@@ -6,6 +6,8 @@ metadata:
     argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
   name: dev-nat
 spec:
+  providerConfigRef:
+    name: gpc-provider
   forProvider:
     logConfig:
       - enable: true

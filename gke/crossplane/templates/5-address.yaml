@@ -6,6 +6,8 @@ metadata:
     argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
   name: nat-ip
 spec:
+  providerConfigRef:
+    name: gpc-provider
   forProvider:
     addressType: EXTERNAL
     region: us-central1
