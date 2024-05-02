@@ -7,7 +7,7 @@ metadata:
     argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
 spec:
   providerConfigRef:
-    name: aws-provider  # This line points to your specific ProviderConfig
+    name: aws-provider 
   forProvider:
     destinationCidrBlock: 0.0.0.0/0
     natGatewayIdRef:
@@ -25,7 +25,7 @@ metadata:
     argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
 spec:
   providerConfigRef:
-    name: aws-provider  # This line points to your specific ProviderConfig
+    name: aws-provider 
   forProvider:
     destinationCidrBlock: 0.0.0.0/0
     gatewayIdRef:
@@ -43,7 +43,7 @@ metadata:
     argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
 spec:
   providerConfigRef:
-    name: aws-provider  # This line points to your specific ProviderConfig
+    name: aws-provider 
   forProvider:
     region: us-east-1
     routeTableIdRef:
@@ -60,7 +60,7 @@ metadata:
     argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
 spec:
   providerConfigRef:
-    name: aws-provider  # This line points to your specific ProviderConfig
+    name: aws-provider 
   forProvider:
     region: us-east-1
     routeTableIdRef:
@@ -77,7 +77,7 @@ metadata:
     argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
 spec:
   providerConfigRef:
-    name: aws-provider  # This line points to your specific ProviderConfig
+    name: aws-provider 
   forProvider:
     region: us-east-1
     routeTableIdRef:
@@ -94,7 +94,7 @@ metadata:
     argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
 spec:
   providerConfigRef:
-    name: aws-provider  # This line points to your specific ProviderConfig
+    name: aws-provider 
   forProvider:
     region: us-east-1
     routeTableIdRef:
