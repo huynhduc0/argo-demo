@@ -1,9 +1,9 @@
 apiVersion: ec2.aws.upbound.io/v1beta1
 kind: VPC
 metadata:
-  name: dev
+  name: dev2
   annotations:
-    argocd.argoproj.io/sync-wave: "3"
+    argocd.argoproj.io/sync-wave: "1"
     argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
 spec:
   providerConfigRef:
@@ -14,4 +14,4 @@ spec:
     enableDnsHostnames: true
     enableDnsSupport: true
     tags:
-      Name: dev
+      Name: dev2
