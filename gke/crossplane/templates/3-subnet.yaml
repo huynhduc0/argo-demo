@@ -9,7 +9,7 @@ spec:
   providerConfigRef:
     name: gpc-provider
   forProvider:
-    ipCidrRange: 10.2.0.0/16
+    ipCidrRange: 10.0.0.0/18
     networkSelector:
     region: us-central1
     secondaryIpRange:
