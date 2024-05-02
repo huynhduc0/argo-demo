@@ -13,5 +13,5 @@ spec:
     networkSelector:
     region: us-central1
     secondaryIpRange:
-      - ipCidrRange: 10.48.0.1/24
+      - ipCidrRange: 10.48.0.0/24
         rangeName: k8s-pod-range
