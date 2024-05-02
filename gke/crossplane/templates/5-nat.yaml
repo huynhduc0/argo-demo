@@ -2,7 +2,7 @@ apiVersion: compute.gcp.upbound.io/v1beta1
 kind: RouterNAT
 metadata:
   annotations:
-    argocd.argoproj.io/sync-wave: "4"
+    argocd.argoproj.io/sync-wave: "5"
     argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
   name: dev-nat
 spec:
