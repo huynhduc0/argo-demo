@@ -1,13 +1,13 @@
 apiVersion: ec2.aws.upbound.io/v1beta1
 kind: VPC
 metadata:
-  name: dev2
+  name: dev-vpc
   annotations:
     argocd.argoproj.io/sync-wave: "1"
     argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
 spec:
   providerConfigRef:
-    name: aws-provider  # This line points to your specific ProviderConfig
+    name: aws-provider
   forProvider:
     region: us-east-1
     cidrBlock: 10.0.0.0/16
