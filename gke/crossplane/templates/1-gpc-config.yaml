@@ -11,5 +11,5 @@ spec:
     source: Secret
     secretRef:
       namespace: crossplane-system
-      name: {{.Values.provider.name}}
+      name: gcp-secret
       key: creds
