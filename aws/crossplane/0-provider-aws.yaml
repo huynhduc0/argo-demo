@@ -3,7 +3,7 @@ kind: Configuration
 metadata:
   name: configuration-aws-eks
   annotations:
-    argocd.argoproj.io/sync-wave: "3"
+    argocd.argoproj.io/sync-wave: "0"
     argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
 spec:
   package: xpkg.upbound.io/upbound/configuration-aws-eks:v0.7.0
