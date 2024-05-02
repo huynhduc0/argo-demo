@@ -6,6 +6,8 @@ metadata:
     argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
   name:  dev-private
 spec:
+  providerConfigRef:
+    name: gpc-provider
   forProvider:
     ipCidrRange: 10.2.0.0/16
     networkSelector:

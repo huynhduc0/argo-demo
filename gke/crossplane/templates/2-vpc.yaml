@@ -8,5 +8,7 @@ metadata:
     argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
   name: {{ .Values.network.vpc.name }}
 spec:
+  providerConfigRef:
+    name: gpc-provider
   forProvider:
     autoCreateSubnetworks: false
