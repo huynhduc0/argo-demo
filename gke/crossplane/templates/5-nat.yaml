@@ -15,3 +15,5 @@ spec:
     natIpAllocateOption: AUTO_ONLY
     region: us-central1
     sourceSubnetworkIpRangesToNat: ALL_SUBNETWORKS_ALL_IP_RANGES
+    subnetwork:
+      nameRef: dev-private
