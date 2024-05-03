@@ -12,5 +12,5 @@ spec:
   forProvider:
     networkRef:
       name: {{ .Values.network.vpc.name }}
-    addressType: EXTERNAL
+    addressType: INTERNAL
     region: us-central1
