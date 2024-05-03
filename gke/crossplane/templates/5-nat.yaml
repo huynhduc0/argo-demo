@@ -1,19 +1,18 @@
 apiVersion: compute.gcp.upbound.io/v1beta1
-kind: RouterNAT
+kind: Router
 metadata:
   annotations:
-    argocd.argoproj.io/sync-wave: "5"
-    argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
-  name: dev-nat
+    meta.upbound.io/example-id: compute/v1beta1/router
+  labels:
+    testing.upbound.io/example-name: example_router
+  name: example-router
 spec:
   providerConfigRef:
     name: gpc-provider
   forProvider:
-    logConfig:
-      - enable: true
-        filter: ERRORS_ONLY
-    natIpAllocateOption: AUTO_ONLY
+    bgp:
+      - advertiseMode: DEFAULT
+        asn: 64514
+    networkRef:
+      name: {{ .Values.network.vpc.name }}
     region: us-central1
-    sourceSubnetworkIpRangesToNat: ALL_SUBNETWORKS_ALL_IP_RANGES
-    subnetwork:
-      - nameRef: dev-private
