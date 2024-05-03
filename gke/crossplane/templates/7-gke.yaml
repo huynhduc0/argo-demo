@@ -10,7 +10,6 @@ spec:
     name: gpc-provider
   forProvider:
     location: {{ .Values.zone }}
-    initialNodeCount: {{ .Values.gkeCluster.initialNodeCount }}
     networkRef:
       name: {{ .Values.network.vpc.name }}
     subnetworkRef:
