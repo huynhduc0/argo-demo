@@ -16,4 +16,4 @@ spec:
     region: us-central1
     sourceSubnetworkIpRangesToNat: ALL_SUBNETWORKS_ALL_IP_RANGES
     subnetwork:
-      nameRef: dev-private
+      - nameRef: dev-private
