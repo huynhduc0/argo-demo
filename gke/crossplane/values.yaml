@@ -3,4 +3,4 @@ provider:
 zone: us-east1
 network:
   vpc:
-    name: dev
+    name: dev-new
