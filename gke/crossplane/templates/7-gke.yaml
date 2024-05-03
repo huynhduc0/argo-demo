@@ -7,16 +7,15 @@ metadata:
   name: "{{ .Values.network.vpc.name }}-cluster"
 spec:
   providerConfigRef:
-    name: gpc-provider
+    name: {{ .Values.provider.name }}
   forProvider:
     location: {{ .Values.zone }}
+    initialNodeCount: 1
+    nodeConfig:
+      machineType: f1-micro
     networkRef:
       name: {{ .Values.network.vpc.name }}
     subnetworkRef:
       name: {{ .Values.network.vpc.name }}-private
     ipAllocationPolicy:
       useIpAliases: true
-    masterAuthorizedNetworksConfig:
-      cidrBlocks:
-        - displayName: master-cidr
-          cidrBlock: {{ .Values.masterAuthorizedNetworksConfig.cidrBlock }}
