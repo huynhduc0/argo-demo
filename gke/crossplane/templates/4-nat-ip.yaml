@@ -5,7 +5,7 @@ metadata:
     argocd.argoproj.io/sync-wave: "4"
     argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
     nat.name: "{{ .Values.network.vpc.name }}-ip"
-  name: nat-ip
+  name: "{{ .Values.network.vpc.name }}-ip"
 spec:
   providerConfigRef:
     name: gpc-provider
