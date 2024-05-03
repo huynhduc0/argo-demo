@@ -13,4 +13,4 @@ spec:
     networkRef:
       name: {{ .Values.network.vpc.name }}
     addressType: EXTERNAL
-    region: us-central1
+    region: {{ .Values.zone }}

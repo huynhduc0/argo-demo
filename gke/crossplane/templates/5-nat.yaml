@@ -14,4 +14,4 @@ spec:
         asn: 64514
     networkRef:
       name: {{ .Values.network.vpc.name }}
-    region: us-central1
+    region: {{ .Values.zone }}

@@ -1,5 +1,6 @@
 provider:
   name: gpc-provider
+zone: us-east-1
 network:
   vpc:
     name: dev

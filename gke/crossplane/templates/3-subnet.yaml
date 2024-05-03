@@ -13,7 +13,7 @@ spec:
       name: {{ .Values.network.vpc.name }}
     ipCidrRange: 10.0.0.0/18
     networkSelector:
-    region: us-central1
+    region: {{ .Values.zone }}
     secondaryIpRange:
       - ipCidrRange: 10.48.0.0/24
         rangeName: k8s-pod-range
