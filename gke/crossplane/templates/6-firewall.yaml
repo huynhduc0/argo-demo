@@ -17,7 +17,7 @@ spec:
         protocol: tcp
     direction: INGRESS
     networkRef:
-      name: "{{ .Values.network.vpc.name }}-private"
+      name: "{{ .Values.network.vpc.name }}"
     sourceRanges:
       - 10.0.0.0/24
     targetTags:

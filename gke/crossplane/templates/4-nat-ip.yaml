@@ -10,7 +10,5 @@ spec:
   providerConfigRef:
     name: gpc-provider
   forProvider:
-    networkRef:
-      name: "{{ .Values.network.vpc.name }}-private"
     addressType: EXTERNAL
     region: {{ .Values.zone }}

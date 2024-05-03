@@ -13,5 +13,5 @@ spec:
       - advertiseMode: DEFAULT
         asn: 64514
     networkRef:
-      name: "{{ .Values.network.vpc.name }}-private"
+      name: "{{ .Values.network.vpc.name }}"
     region: {{ .Values.zone }}

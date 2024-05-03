@@ -1,0 +1,23 @@
+apiVersion: compute.gcp.upbound.io/v1beta1
+kind: Cluster
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "7"
+    argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
+  name: "{{ .Values.network.vpc.name }}-cluster"
+spec:
+  providerConfigRef:
+    name: gpc-provider
+  forProvider:
+    location: {{ .Values.zone }}
+    initialNodeCount: {{ .Values.gkeCluster.initialNodeCount }}
+    networkRef:
+      name: {{ .Values.network.vpc.name }}
+    subnetworkRef:
+      name: {{ .Values.network.vpc.name }}-private
+    ipAllocationPolicy:
+      useIpAliases: true
+    masterAuthorizedNetworksConfig:
+      cidrBlocks:
+        - displayName: master-cidr
+          cidrBlock: {{ .Values.masterAuthorizedNetworksConfig.cidrBlock }}
