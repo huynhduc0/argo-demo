@@ -12,7 +12,7 @@ spec:
     location: {{ .Values.zone }}
     initialNodeCount: 1
     nodeConfig:
-      - machineType: f1-micro
+      - machineType: e2-micro
     networkRef:
       name: {{ .Values.network.vpc.name }}
     subnetworkRef:
