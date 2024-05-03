@@ -12,10 +12,10 @@ spec:
     location: {{ .Values.zone }}
     initialNodeCount: 1
     nodeConfig:
-      machineType: f1-micro
+      - machineType: f1-micro
     networkRef:
       name: {{ .Values.network.vpc.name }}
     subnetworkRef:
       name: {{ .Values.network.vpc.name }}-private
     ipAllocationPolicy:
-      useIpAliases: true
+      - useIpAliases: true
