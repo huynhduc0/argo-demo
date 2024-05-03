@@ -10,9 +10,6 @@ spec:
     name: {{ .Values.provider.name }}
   forProvider:
     location: {{ .Values.zone }}
-    initialNodeCount: 1
-    nodeConfig:
-      - machineType: f1-small
     networkRef:
       name: {{ .Values.network.vpc.name }}
     subnetworkRef:
