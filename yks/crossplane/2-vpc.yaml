@@ -7,9 +7,8 @@ metadata:
     argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
 spec:
   region: us-central1
-  providerConfig:
-    credentialSecretRef:
-      name: yc-provider
+  providerConfigRef:
+    name: yc-provider
   deletionPolicy: Orphan
   forProvider:
     name: yc-dev
