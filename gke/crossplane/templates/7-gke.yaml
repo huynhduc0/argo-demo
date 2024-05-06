@@ -12,8 +12,8 @@ spec:
     initialNodeCount: 1
     removeDefaultNodePool: true
     nodeConfig:
-      machineType: e2-micro
-      diskSizeGb: 10
+      - machineType: e2-micro
+        diskSizeGb: 10
     location: {{ .Values.zone }}
     networkRef:
       name: {{ .Values.network.vpc.name }}
