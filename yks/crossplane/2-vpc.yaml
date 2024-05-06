@@ -3,7 +3,7 @@ kind: Network
 metadata:
   name: yc-dev
   annotations:
-    argocd.argoproj.io/sync-wave: "1"
+    argocd.argoproj.io/sync-wave: "2"
     argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
 spec:
   region: us-central1
