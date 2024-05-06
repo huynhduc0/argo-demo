@@ -6,7 +6,7 @@ metadata:
     argocd.argoproj.io/sync-wave: "1"
     argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
 spec:
-  projectID: hihi-1541495393612
+  projectID: arcane-geode-422508-p4
   credentials:
     source: Secret
     secretRef:
