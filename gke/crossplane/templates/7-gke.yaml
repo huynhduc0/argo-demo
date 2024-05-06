@@ -9,6 +9,10 @@ spec:
   providerConfigRef:
     name: {{ .Values.provider.name }}
   forProvider:
+    initialNodeCount: 1
+    removeDefaultNodePool: true
+    nodeConfig:
+      - machineType: f1-small
     location: {{ .Values.zone }}
     networkRef:
       name: {{ .Values.network.vpc.name }}
