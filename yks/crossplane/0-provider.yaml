@@ -6,4 +6,4 @@ metadata:
     argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
   name: provider-upjet-yc
 spec:
-  package: cr.yandex/crp0kch415f0lke009ft/crossplane/provider-jet-yc:v0.1.37
+  package: xpkg.upbound.io/tages/provider-upjet-yc:v1.1.0

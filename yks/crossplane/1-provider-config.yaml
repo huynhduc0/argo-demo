@@ -1,4 +1,4 @@
-apiVersion: yandex-cloud.jet.crossplane.io/v1alpha1
+apiVersion: yandex-cloud.upjet.crossplane.io/v1beta1
 kind: ProviderConfig
 metadata:
   name: yc-provider
