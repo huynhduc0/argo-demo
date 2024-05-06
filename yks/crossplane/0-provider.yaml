@@ -1,0 +1,9 @@
+apiVersion: pkg.crossplane.io/v1
+kind: Provider
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
+    argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
+  name: provider-upjet-yc
+spec:
+  package: xpkg.upbound.io/tages/provider-upjet-yc:v1.0.0
