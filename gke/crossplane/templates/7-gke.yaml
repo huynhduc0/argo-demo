@@ -10,7 +10,6 @@ spec:
     name: gpc-provider
   forProvider:
     initialNodeCount: 1
-    removeDefaultNodePool: true
     nodeConfig:
       - machineType: e2-micro
         diskSizeGb: 10
