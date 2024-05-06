@@ -1,0 +1,14 @@
+apiVersion: yandex-cloud.upjet.crossplane.io/v1beta1
+kind: ProviderConfig
+metadata:
+  name: yc-provider
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+    argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
+spec:
+  credentials:
+    source: Secret
+    secretRef:
+      namespace: crossplane-system
+      name: yc-secret
+      key: creds

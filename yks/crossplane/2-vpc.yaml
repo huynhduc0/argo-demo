@@ -1,0 +1,16 @@
+apiVersion: vpc.yandex-cloud.upjet.crossplane.io/v1alpha1
+kind: Network
+metadata:
+  name: yc-dev
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+    argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
+spec:
+  region: us-central1
+  providerConfig:
+    credentialSecretRef:
+      name: yc-provider
+  deletionPolicy: Orphan
+  forProvider:
+    name: yc-dev
+    folderId: b1grikeilmme061muqeo
