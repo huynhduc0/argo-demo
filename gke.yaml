@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: gke
+  namespace: argocd
+spec:
+  destination:
+    name: ''
+    namespace: dev3
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: gke/crossplane
+    repoURL: 'https://github.com/huynhduc0/argo-demo/'
+    targetRevision: HEAD
+    helm:
+      valueFiles:
+        - values.yaml
+  sources: []
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
