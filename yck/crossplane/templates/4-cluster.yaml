@@ -13,6 +13,7 @@ spec:
     description: {{ .Values.cluster.name }}-cluster
     networkIdRef:
       name: {{ .Values.vpc.name }}
+    serviceAccountId: ajerlcjs78pk72f0u4i4
     master:
       - version: "1.21"
         zonal:
