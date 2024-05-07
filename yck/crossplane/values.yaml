@@ -5,6 +5,6 @@ vpc:
   name: yc-dev-vpc
   cidrBlock:
   subnet:
-    name: dev-yc-private
+    name: yc-dev-vpc-private
     cidrBlock:
 zoneId: ru-central1-a
