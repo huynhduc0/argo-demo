@@ -7,4 +7,4 @@ vpc:
   subnet:
     name: yc-dev-vpc-private
     cidrBlock:
-zoneId: ru-central1-a
+zone: ru-central1-a
