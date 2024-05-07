@@ -18,7 +18,13 @@ spec:
     master:
       - version: "1.21"
         zonal:
-          - zone: {{ .Values.zone }}
+          - zone:  {{ .Values.zone }}
             subnetIdRef:
-              name: {{ .Values.vpc.subnet.name }}
+              name: example-subnet-a
+        publicIp: false
+        maintenancePolicy:
+          - autoUpgrade: false
+            maintenanceWindow:
+              - startTime: "15:00"
+                duration: "3h"
     folderId: {{ .Values.folderId }}
