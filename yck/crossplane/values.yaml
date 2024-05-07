@@ -1,6 +1,6 @@
 folderId: b1grikeilmme061muqeo
 cluster:
-  name: yc-dev-cluster
+  name: yc-crpl-cluster
 vpc:
   name: yc-dev-vpc
   cidrBlock:
