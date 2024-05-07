@@ -10,5 +10,5 @@ spec:
   providerConfigRef:
     name: yc-provider
   forProvider:
-    name: yc-dev
+    name: {{ .Values.vpc.name }}
     folderId: {{ .Values.folderId }}

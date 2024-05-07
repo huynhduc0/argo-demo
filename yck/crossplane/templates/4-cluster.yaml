@@ -11,7 +11,7 @@ spec:
     name: yc-provider
   forProvider:
     name: {{ .Values.cluster.name }}
-    description: {{ .Values.cluster.name }} cluster
+    description: {{ .Values.cluster.name }}-cluster
     networkIdRef:
       name: {{ .Values.vpc.name }}
     master:
