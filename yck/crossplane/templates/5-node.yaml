@@ -9,7 +9,8 @@ spec:
   providerConfigRef:
     name: yc-provider
   forProvider:
-    clusterId: {{ .Values.cluster.name }}
+    clusterIdRef:
+      name: {{ .Values.cluster.name }}
     name: {{ .Values.cluster.name }}-node
     version: "1.21"
     folderId: {{ .Values.folderId }}
