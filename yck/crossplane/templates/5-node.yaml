@@ -25,7 +25,7 @@ spec:
             cores: 1
         bootDisk:
           - type: "network-hdd"
-            size: 10
+            size: 16
         schedulingPolicy:
           - preemptible: true
     scalePolicy:
