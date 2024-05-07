@@ -1,11 +1,11 @@
 apiVersion: vpc.yandex-cloud.upjet.crossplane.io/v1alpha1
 kind: Network
 metadata:
-  name: {{ .Values.network.name }}
+  name: {{ .Values.vpc.name }}
   annotations:
     argocd.argoproj.io/sync-wave: "2"
     argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
-    crossplane.io/external-name: {{ .Values.network.name }}
+    crossplane.io/external-name: {{ .Values.vpc.name }}
 spec:
   providerConfigRef:
     name: yc-provider
