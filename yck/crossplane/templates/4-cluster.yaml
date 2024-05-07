@@ -20,7 +20,7 @@ spec:
         zonal:
           - zone:  {{ .Values.zone }}
             subnetIdRef:
-              name: example-subnet-a
+              name: {{ .Values.vpc.subnet.name }}
         publicIp: false
         maintenancePolicy:
           - autoUpgrade: false
