@@ -1,0 +1,4 @@
+apiVersion: v2
+name: YCK
+version: 0.1.0
+description: YCK with argoCD and Crossplane

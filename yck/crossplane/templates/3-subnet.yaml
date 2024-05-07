@@ -1,0 +1,19 @@
+apiVersion: vpc.yandex-cloud.upjet.crossplane.io/v1alpha1
+kind: Subnet
+metadata:
+  name: {{ .Values.vpc.subnet.name }}
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
+    argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
+    crossplane.io/external-name: {{ .Values.vpc.subnet.name }}
+spec:
+  providerConfigRef:
+    name: yc-provider
+  forProvider:
+    name: {{ .Values.vpc.subnet.name }}
+    networkIdRef:
+      name: {{ .Values.vpc.name }}
+    v4CidrBlocks:
+      - {{ .Values.vpc.subnet.cidr }}
+    zone: {{ .Values.zone }}
+    folderId: {{ .Values.folderId }}

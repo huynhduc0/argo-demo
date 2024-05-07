@@ -1,0 +1,36 @@
+apiVersion: kubernetes.yandex-cloud.jet.crossplane.io/v1alpha1
+kind: NodeGroup
+metadata:
+  name: {{ .Values.cluster.name }}-node
+  annotations:
+    argocd.argoproj.io/sync-wave: "5"
+    argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
+    crossplane.io/external-name: {{ .Values.cluster.name }}-node
+spec:
+  providerConfigRef:
+    name: yc-provider
+  forProvider:
+    clusterIdRef:
+      name: {{ .Values.cluster.name }}
+    name: {{ .Values.cluster.name }}-node
+    version: "1.21"
+    instanceTemplate:
+      - platformId: "standard-v2"
+        networkInterface:
+          - nat: true
+            subnetIdsRefs:
+              - name: {{ .Values.vpc.subnet.name }}
+        resources:
+          - memory: 2
+            cores: 1
+        bootDisk:
+          - type: "network-hdd"
+            size: 10
+        schedulingPolicy:
+          - preemptible: true
+    scalePolicy:
+      - fixedScale:
+          - size: 1
+    allocationPolicy:
+      - location:
+          - zone: {{ .Values.zone }}

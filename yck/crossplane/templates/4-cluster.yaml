@@ -1,0 +1,22 @@
+apiVersion: kubernetes.yandex-cloud.upjet.crossplane.io/v1alpha1
+kind: Cluster
+metadata:
+  name: {{ .Values.cluster.name }}
+  annotations:
+    argocd.argoproj.io/sync-wave: "4"
+    argocd.argoproj.io/sync-options: "SkipDryRunOnMissingResource=true"
+    crossplane.io/external-name: {{ .Values.cluster.name }}
+spec:
+  providerConfigRef:
+    name: yc-provider
+  forProvider:
+    name: {{ .Values.cluster.name }}
+    description: {{ .Values.cluster.name }} cluster
+    networkIdRef:
+      name: {{ .Values.vpc.name }}
+    master:
+      - version: "1.21"
+        zonal:
+          - zone: {{ .Values.zone }}
+            subnetIdRef:
+              name: {{ .Values.vpc.subnet.name }}

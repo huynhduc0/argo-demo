@@ -1,0 +1,10 @@
+folderId: b1grikeilmme061muqeo
+cluster:
+  name: yc-cluster
+vpc:
+  name: yc-dev
+  cidrBlock:
+  subnet:
+    name: dev-yc-private
+    cidrBlock:
+zoneId: ru-central1-a
