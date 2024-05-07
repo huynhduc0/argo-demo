@@ -12,7 +12,7 @@ spec:
     clusterIdRef:
       name: {{ .Values.cluster.name }}
     name: {{ .Values.cluster.name }}-node
-    version: "1.21"
+    version: "1.27"
     folderId: {{ .Values.folderId }}
     instanceTemplate:
       - platformId: "standard-v2"
