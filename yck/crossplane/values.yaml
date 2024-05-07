@@ -2,7 +2,7 @@ folderId: b1grikeilmme061muqeo
 cluster:
   name: yc-cluster
 vpc:
-  name: yc-dev
+  name: yc-dev-vpc
   cidrBlock:
   subnet:
     name: dev-yc-private
