@@ -22,9 +22,4 @@ spec:
             subnetIdRef:
               name: {{ .Values.vpc.subnet.name }}
         publicIp: false
-        maintenancePolicy:
-          - autoUpgrade: false
-            maintenanceWindow:
-              - startTime: "15:00"
-                duration: "3h"
     folderId: {{ .Values.folderId }}
