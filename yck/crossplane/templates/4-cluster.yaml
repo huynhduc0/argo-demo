@@ -16,7 +16,7 @@ spec:
     serviceAccountId: ajeo0isdo22o053df63i
     nodeServiceAccountId: ajeo0isdo22o053df63i
     master:
-      - version: "1.21"
+      - version: "1.27"
         zonal:
           - zone:  {{ .Values.zone }}
             subnetIdRef:
