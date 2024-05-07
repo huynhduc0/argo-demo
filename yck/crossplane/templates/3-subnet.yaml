@@ -13,5 +13,7 @@ spec:
     name: {{ .Values.vpc.subnet.name }}
     networkIdRef:
       name: {{ .Values.vpc.name }}
+    v4CidrBlocks:
+      - 10.0.0.0/16
     zone: {{ .Values.zone }}
     folderId: {{ .Values.folderId }}
