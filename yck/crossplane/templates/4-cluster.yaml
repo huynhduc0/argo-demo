@@ -19,3 +19,5 @@ spec:
           - zone: {{ .Values.zone }}
             subnetIdRef:
               name: {{ .Values.vpc.subnet.name }}
+    folderIdRef:
+      name: {{ .Values.folderId }}

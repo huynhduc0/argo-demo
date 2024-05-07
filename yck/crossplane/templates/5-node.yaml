@@ -13,6 +13,8 @@ spec:
       name: {{ .Values.cluster.name }}
     name: {{ .Values.cluster.name }}-node
     version: "1.21"
+    folderIdRef:
+      name: {{ .Values.folderId }}
     instanceTemplate:
       - platformId: "standard-v2"
         networkInterface:
